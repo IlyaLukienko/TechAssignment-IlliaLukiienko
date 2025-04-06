@@ -20,13 +20,17 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.lukiienko.paymentsapp.R
+import com.lukiienko.paymentsapp.core.util.StringResourcesHelper
 import com.lukiienko.paymentsapp.presentation.navigation.Routes
 import com.lukiienko.paymentsapp.presentation.viewmodel.PinPadViewModel
 
@@ -36,6 +40,8 @@ fun PinPadScreen(
     viewModel: PinPadViewModel = hiltViewModel()
 ) {
     val amount by viewModel.amount.collectAsState()
+    val context = LocalContext.current
+    val stringHelper = remember { StringResourcesHelper(context) }
 
     Column(
         modifier = Modifier
@@ -48,13 +54,13 @@ fun PinPadScreen(
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
-                text = "Purchase",
+                text = stringHelper.get(R.string.purchase_title),
                 style = MaterialTheme.typography.headlineLarge,
                 fontWeight = FontWeight.Bold
             )
 
             Text(
-                text = "Please enter amount.",
+                text = stringHelper.get(R.string.purchase_subtitle),
                 style = MaterialTheme.typography.bodyMedium,
                 color = Color.Gray,
                 modifier = Modifier.padding(top = 4.dp, bottom = 32.dp)
@@ -84,7 +90,7 @@ fun PinPadScreen(
                 contentColor = Color.White
             )
         ) {
-            Text("OK")
+            Text(text = stringHelper.get(R.string.ok))
         }
     }
 }

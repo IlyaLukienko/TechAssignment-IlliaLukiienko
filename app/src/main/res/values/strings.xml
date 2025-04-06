@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PaymentsApp</string>
+
+    <string name="purchase_title">Purchase</string>
+    <string name="purchase_subtitle">Please enter amount.</string>
+    <string name="ok">OK</string>
 </resources>
