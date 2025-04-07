@@ -39,6 +39,8 @@ A simple Android Payment App built as part of the Wallee Tech Assignment. The ap
 ---
 
 ##  Architecture
+```text
+com.lukiienko.paymentsapp
 ├── core
 │   ├── theme                    # App theme (colors, typography)
 │   └── util                     # Helpers (e.g. StringResourcesHelper)
@@ -65,3 +67,4 @@ A simple Android Payment App built as part of the Wallee Tech Assignment. The ap
 │   └── MainActivity.kt          # Entry point
 │
 └── PaymentsApp.kt               # Hilt Application class
+
