@@ -1,4 +1,4 @@
-package com.lukiienko.paymentsapp.presentation.screen.pinpad
+package com.lukiienko.paymentsapp.presentation.ui.pinpad
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

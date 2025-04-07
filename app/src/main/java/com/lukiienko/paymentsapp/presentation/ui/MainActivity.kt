@@ -1,4 +1,4 @@
-package com.lukiienko.paymentsapp.presentation.screen
+package com.lukiienko.paymentsapp.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">PaymentsApp</string>
-
     <string name="purchase_title">Purchase</string>
     <string name="purchase_subtitle">Please enter amount.</string>
     <string name="ok">OK</string>
+    <string name="unknown_error">"Unknown error"</string>
+    <string name="transaction_id">Transaction ID</string>
+    <string name="transaction_status">Status</string>
+    <string name="final_amount">Final Amount</string>
+    <string name="tax_amount">Tax</string>
+    <string name="date_time">Date</string>
 </resources>

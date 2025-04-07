@@ -4,7 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.lukiienko.paymentsapp.presentation.screen.pinpad.PinPadScreen
+import com.lukiienko.paymentsapp.presentation.ui.pinpad.PinPadScreen
+import com.lukiienko.paymentsapp.presentation.ui.receipt.ReceiptScreen
 
 object Routes {
     const val PIN_PAD = "pinpad"
@@ -21,7 +22,7 @@ fun NavGraph(navController: NavHostController) {
             PinPadScreen(navController = navController)
         }
         composable(Routes.RECEIPT) {
-
+            ReceiptScreen(navController = navController)
         }
     }
 }

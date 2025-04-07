@@ -6,7 +6,6 @@ class PinPadUseCase(
     private val screen: IPinPadScreen
 ) {
     private var rawInput: String = ""
-
     private val maxLength = 8 //  99999999 → 999999.99
 
     fun onDigitPressed(digit: Char) {
