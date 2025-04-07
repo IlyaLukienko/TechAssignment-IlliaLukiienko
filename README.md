@@ -1,7 +1,5 @@
 # TechAssignment-IlliaLukiienko
 
-# TechAssignment-IlliaLukiienko
-
 A simple Android Payment App built as part of the Wallee Tech Assignment. The app demonstrates modern Android development practices including Clean Architecture, MVVM, Jetpack Compose, Ktor, and Hilt.
 
 ---
@@ -19,7 +17,7 @@ A simple Android Payment App built as part of the Wallee Tech Assignment. The ap
 
 ---
 
-## 📱 Screenshots
+##  Screenshots
 
 | PinPad Screen                             | Receipt Screen                             |
 |------------------------------------------|--------------------------------------------|
@@ -27,7 +25,7 @@ A simple Android Payment App built as part of the Wallee Tech Assignment. The ap
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Layer         | Tools & Libraries                            |
 |---------------|-----------------------------------------------|
@@ -40,29 +38,30 @@ A simple Android Payment App built as part of the Wallee Tech Assignment. The ap
 
 ---
 
-## 🧱 Architecture
-
-📁 app
-├── core/
-│   └── StringResourcesHelper.kt
-├── data/
-│   └── repository/ReceiptRepositoryImpl.kt
-├── domain/
-│   ├── model/Transaction.kt
-│   ├── repository/ReceiptRepository.kt
-│   ├── screen/IPinPadScreen.kt
-│   ├── screen/IReceiptScreen.kt
-│   └── usecase/
-│       ├── PinPadUseCase.kt
-│       └── ReceiptUseCase.kt
-├── presentation/
-│   ├── navigation/NavGraph.kt
-│   ├── ui/
-│   │   ├── pinpad/PinPadScreen.kt
-│   │   └── receipt/ReceiptScreen.kt
-│   └── viewmodel/
-│       ├── PinPadViewModel.kt
-│       └── ReceiptViewModel.kt
-└── di/
-    ├── NetworkModule.kt
-    └── RepositoryModule.kt
+##  Architecture
+├── core
+│   ├── theme                    # App theme (colors, typography)
+│   └── util                     # Helpers (e.g. StringResourcesHelper)
+│
+├── data
+│   └── repository               # Repository implementations (e.g. ReceiptRepositoryImpl)
+│
+├── di
+│   ├── NetworkModule            # Ktor & JSON setup
+│   ├── RepositoryModule         # Provides interfaces -> implementations
+│
+├── domain
+│   ├── model                    # Transaction, Amount, ReceiptUiState
+│   ├── repository               # Repository interfaces
+│   ├── screen                   # ViewModel communication interfaces (IPinPadScreen, IReceiptScreen)
+│   └── usecase                  # Business logic (PinPadUseCase, ReceiptUseCase)
+│
+├── presentation
+│   ├── navigation               # NavGraph
+│   ├── ui
+│   │   ├── pinpad               # PinPadScreen & components
+│   │   └── receipt              # ReceiptScreen & components
+│   ├── viewmodel                # PinPadViewModel, ReceiptViewModel
+│   └── MainActivity.kt          # Entry point
+│
+└── PaymentsApp.kt               # Hilt Application class
